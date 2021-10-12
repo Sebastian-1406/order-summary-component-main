@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --font : 'Red Hat Display', sans-serif;
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    background: var(--Pale-blue);
+    background-image: url("../images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+.contenedor {
+    min-width: 330px;
+    border-radius: 20px;
+    overflow: hidden;
+    font-family: var(--font);
+    margin: auto 20px;
+}
+.hero img{
+    width: 100%;
+    vertical-align: middle;
+}
+.card {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.texto:first-child p{
+    padding: 10px;
+    margin: 0;
+}
+.texto:last-child p{
+    margin: 0;
+}
+.text-dark {
+    color: var(--Dark-blue);
+    font-weight: 900;
+    margin: 10px 0;
+}
+.text-desaturate {
+    color: var(--Desaturated-blue);
+    line-height: 25px;
+}
+.plan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    border-radius: 10px;
+    background: var(--Very-pale-blue);
+}
+.cambiar {
+    color: var(--Bright-blue);
+    transition: opacity ease .5s;
+}
+.plan .music {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+.botones{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.btn {
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+}
+.btn-azul {
+    background:var(--Bright-blue);
+    color: #fff;
+    transition: box-shadow, opacity ease .5s;
+}
+.btn-transparente {
+    background: transparent;
+    color: var(--Desaturated-blue);
+    transition: color ease .5s;
+}
+@media screen and (min-width:376px){
+    body {
+        background-image: url("../images/pattern-background-desktop.svg");
+        background-position: top;
+    }
+    .contenedor {
+        max-width: 400px;
+    }
+    .card {
+        padding: 20px 40px;
+    }
+    .btn {
+        cursor: pointer;
+    }
+    .btn-azul:hover {
+        opacity: .6;
+        box-shadow: 0px 15px 20px #0002;
+    }
+    .btn-transparente:hover {
+        color: var(--Dark-blue);
+    }
+    .cambiar:hover {
+        opacity: .8;
+    }
+}
+@media screen and (min-width:1200px){
+    body {
+        align-items: center;
+    }
+}
